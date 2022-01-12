@@ -1,16 +1,16 @@
 # SetLocal
-SetLocal is a vim utility for emulating buffer-local options for vim options
-with only a global scope.
+SetLocal is a Vim utility for faking buffer-local options for options with only
+a global scope.
 
 SetLocal achieves this by changing the global option with BufEnter and
 BufLeave events.
 
 ## Usage
 Enable `virtualedit` for the current buffer with
-`call SetLocal('virtualedit', 'all')`
+`call setlocal#set('virtualedit', 'all')`
 
 Clear the "local" option and restore the global option with
-`SetLocal_Clear('virtualedit')`
+`setlocal#clear('virtualedit')`
 
 Check if "local" option is enabled with
-`SetLocal_GetState('virtualedit')
+`setlocal#get_state('virtualedit')
